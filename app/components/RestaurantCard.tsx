@@ -1,16 +1,19 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import { StarIcon, MapPinIcon } from "react-native-heroicons/outline";
+import { urlFor } from "@/sanity";
+import { router, RouteParams } from "expo-router";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 type RestaurantCardProps = {
   id: string;
   title: string;
-  imgUrl: string;
+  imgUrl: any;
   rating: number;
   genre: string;
   address: string;
   shortDescription: string;
-  dishes: string[];
+  dishes: any[];
   long: number;
   lat: number;
 };
@@ -28,8 +31,33 @@ const RestaurantCard = ({
   lat,
 }: RestaurantCardProps) => {
   return (
-    <TouchableOpacity className="bg-white mr-3 shadow mb-2">
-      <Image source={{ uri: imgUrl }} className="h-36 w-64 rounded-sm" />
+    <TouchableOpacity
+      onPress={() => {
+        dishes = dishes.map((dish) => {
+          return { ...dish, image: urlFor(dish.image).url() };
+        });
+        AsyncStorage.setItem(`Dishes-${id}`, JSON.stringify(dishes));
+        router.navigate({
+          pathname: "/Screens/RestaurantScreen",
+          params: {
+            id,
+            title,
+            imgUrl: urlFor(imgUrl).url(),
+            rating,
+            genre,
+            address,
+            shortDescription,
+            long,
+            lat,
+          },
+        });
+      }}
+      className="bg-white mr-3 shadow mb-2"
+    >
+      <Image
+        source={{ uri: urlFor(imgUrl).url() }}
+        className="h-36 w-64 rounded-sm"
+      />
 
       <View className="px-3 pb-4">
         <Text className="font-bold text-lg pt-2">{title}</Text>

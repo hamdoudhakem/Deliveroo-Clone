@@ -11,7 +11,7 @@ const CategorieCard = ({
   return (
     <TouchableOpacity className="mr-3 relative">
       <Image source={{ uri: imgUrl }} className="w-20 h-20 rounded" />
-      <Text className="absolute bottom-1 left-1 text-white font-bold">
+      <Text className="absolute bottom-1 left-1 text-amber-400 font-bold">
         {title}
       </Text>
     </TouchableOpacity>
