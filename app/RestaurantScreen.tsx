@@ -8,9 +8,11 @@ import {
   QuestionMarkCircleIcon,
   StarIcon,
 } from "react-native-heroicons/outline";
-import DishRow from "@/app/components/DishRow";
+import DishRow from "@/components/DishRow";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { BasketIcon } from "../components/Basketicon";
+import { BasketIcon } from "../components/BasketIcon";
+import { useDispatch } from "react-redux";
+import { setRestaurant } from "../features/RestaurantSlice";
 
 type SearchParams = {
   id: string;
@@ -20,14 +22,14 @@ type SearchParams = {
   genre: string;
   address: string;
   shortDescription: string;
-  dishes: any[];
   long: string;
   lat: string;
-  users: any[];
 };
 
 const RestaurantScreen = () => {
   const [dishes, setDishes] = useState<any[]>([]);
+
+  const dispatch = useDispatch();
 
   const {
     id,
@@ -39,24 +41,42 @@ const RestaurantScreen = () => {
     shortDescription,
     long,
     lat,
-  } = useLocalSearchParams();
+  }: SearchParams = useLocalSearchParams();
 
   useEffect(() => {
+    //Get the Cached Dishes
     const getDishes = async () => {
       return await AsyncStorage.getItem(`Dishes-${id}`);
     };
 
     getDishes().then((data) => setDishes(JSON.parse(data || "[]")));
-  }, []);
 
-  console.log("########################################\nDishes", dishes);
+    // Displatch Stuff
+    dispatch(
+      setRestaurant({
+        restaurant: {
+          id,
+          title,
+          imgUrl,
+          rating,
+          genre,
+          address,
+          shortDescription,
+          long,
+          lat,
+        },
+      })
+    );
+  }, [dispatch]);
+
+  // console.log("########################################\nDishes", dishes);
   return (
     <>
       <BasketIcon />
       <ScrollView>
         <View className="relative">
           <Image
-            source={{ uri: imgUrl as string }}
+            source={{ uri: imgUrl }}
             className="w-full h-56 bg-gray-400 p-4"
           />
 

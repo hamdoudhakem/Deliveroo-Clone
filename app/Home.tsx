@@ -9,7 +9,7 @@ import {
 } from "react-native-heroicons/outline";
 import { router, useNavigation } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Categories, FeaturedRow } from "@/app/components";
+import { Categories, FeaturedRow } from "@/components";
 import SanityClient from "@/sanity";
 
 const Home = () => {

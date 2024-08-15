@@ -38,7 +38,7 @@ const RestaurantCard = ({
         });
         AsyncStorage.setItem(`Dishes-${id}`, JSON.stringify(dishes));
         router.navigate({
-          pathname: "/Screens/RestaurantScreen",
+          pathname: "/RestaurantScreen",
           params: {
             id,
             title,

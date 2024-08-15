@@ -64,7 +64,7 @@ const FeaturedRow = ({
             address={restaurant.address}
             shortDescription={restaurant.short_description}
             dishes={restaurant.dishes}
-            long={restaurant.lng}
+            long={restaurant.long}
             lat={restaurant.lat}
           />
         ))}
