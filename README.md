@@ -1,50 +1,59 @@
-# Welcome to your Expo app 👋
+# Deliveroo Clone
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This Deliveroo Clone app is built using React Native, offering a seamless and interactive experience for users to explore restaurants, select dishes, and place orders. The app efficiently handles state management with Redux, fetches data from a Sanity server, and uses Tailwind CSS for styling. It also includes caching for restaurant pages to ensure fast and smooth navigation.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **Restaurant Browsing:** Explore a wide range of restaurants and cuisines.
+- **Dish Selection:** Choose from various dishes and customize your order.
+- **Basket Management:** Add, remove, and modify items in your basket before placing an order.
+- **Order Placement:** Seamlessly place orders with a user-friendly interface.
+- **State Management:** Efficiently handled using Redux for optimal performance.
+- **Data Fetching:** Integrated with a Sanity server for dynamic data retrieval.
+- **Caching:** Restaurant pages are cached to enhance the user experience by reducing load times.
+- **Responsive Design:** Tailwind CSS ensures a clean and responsive design across devices.
 
-   ```bash
+## Screenshots
+
+| Feature            | Screenshot                              |
+|--------------------|-----------------------------------------|
+| **Home Screen**    | ![Home Screen](path/to/home_screen.png) |
+| **Restaurant List**| ![Restaurant List](path/to/restaurant_list.png) |
+| **Dish Selection** | ![Dish Selection](path/to/dish_selection.png) |
+| **Basket Management** | ![Basket Management](path/to/basket_management.png) |
+| **Order Summary**  | ![Order Summary](path/to/order_summary.png) |
+
+## Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/deliveroo-clone.git
+   ```
+2. Navigate to the project directory:
+   ```
+   cd deliveroo-clone
+   ```
+3. Install the dependencies:
+   ```
    npm install
    ```
-
-2. Start the app
-
-   ```bash
-    npx expo start
+4. Run the app:
+   ```
+   npm start
    ```
 
-In the output, you'll find options to open the app in a
+## Technologies Used
+- React Native
+- Redux for state management
+- Sanity.io for backend and content management
+- Tailwind CSS for styling
+- Expo for easy development and deployment
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## License
+This project is licensed under the MIT License.
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Acknowledgments
+- Deliveroo for inspiration
