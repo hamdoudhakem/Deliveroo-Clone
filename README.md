@@ -17,21 +17,20 @@ This Deliveroo Clone app is built using React Native, offering a seamless and in
 
 | Feature            | Screenshot                              |
 |--------------------|-----------------------------------------|
-| **Home Screen**    | ![Home Screen](path/to/home_screen.png) |
-| **Restaurant List**| ![Restaurant List](path/to/restaurant_list.png) |
-| **Dish Selection** | ![Dish Selection](path/to/dish_selection.png) |
-| **Basket Management** | ![Basket Management](path/to/basket_management.png) |
-| **Order Summary**  | ![Order Summary](path/to/order_summary.png) |
+| **Home Screen**    | ![Home Screen](screenshots/Home.png) |
+| **Restaurant** | ![Restaurant List](screenshots/Restaurant.png) |
+| **Basket Management** | ![Basket Management](screenshots/Basket.png) |
+| **Order Delivery**  | ![Order Summary](screenshots/Order_Finished.png) |
 
 ## Installation
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/deliveroo-clone.git
+   git clone https://github.com/hamdoudhakem/Deliveroo-Clone.git
    ```
 2. Navigate to the project directory:
    ```
-   cd deliveroo-clone
+   cd Deliveroo-Clone
    ```
 3. Install the dependencies:
    ```
